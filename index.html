@@ -1,0 +1,479 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>THINDA | Practical Data Skills. Better Decisions.</title><meta name="description" content="THINDA is a Kenyan data education and analytics company. Learn Excel, SQL, and Power BI, and help businesses make better decisions with data."><meta property="og:title" content="THINDA | Practical Data Skills. Better Decisions."><meta property="og:description" content="Build job-ready data skills, and help businesses decide with data."><meta property="og:type" content="website"><link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAIAAAD8GO2jAAAElklEQVR42o2WT4hVVRzHv99z7nvz/qgzo/PSN5OTk445ENaiCHMVLbJVBJHQQqhtqxZGYFAQCLlyk2CboBKFKCQTQ2KaRIkGmf4oyWiKklCWzOhznPfn3nN+Lc69951731O73MXl3HPO7+/3cw7N3X+IBz8CsN/3Ax+VrnGvv2PWQnfg/+8OIOjrqfR6St7LNrPjWfMS9IbcO+9+kXkj7LOcqjdkekHkVoqXKAFE3DRhPEe872wNch7l3LTWpomi7wehVeqP9K8Be1Lku+9+6RVVhCGMBQlJJwvIZrM1EATQTNbkzQQCQEQ817JJEBYKh46c2HvgcBBoRZWkWEg2l5uv79yx+83XbKujFKVfmylAyHskXYSF4MaNm0eO/bCqWh6sVkiXeFFUnUhPbpp8Y+dLtDbZUnrzxPsITQSqWv79t4uLjaWBYkGAJ6YeLZaKsLCmo5rXUCAiIwMToBIBmO89Oh30Vaa1VpVLX3z13a63Pmy12tR6ZbV84eTHQ/Xauxca79QbtV9ebRurN+8J1k/BtMi4fUQEBBPh9I/AhSrgyVNnFxYbq4YGD3769benzy78+PkHC3r/H7dvPT9SWTxlgtV6zbOQMF5B9hY06B+Ai1fkxR3bAQVUZs7MHZ+ZFfJqM6oqoS5z9GVlLWyzu9zJhHlUUHrkntY6WmoaY4MVpt0J3c8iaSEigvAOBKACXVaSRQLxihGkjU9P5ZIEoZUioLWKo/bbRGmx4uucpM/ELOxEhEjblU7ygKQ48DpYM9vQ3n/nB720KyRbMp7MfqpnyoZIcDu0sekcB+ORTBR52DH2w+3mwEcAipQwjIwdLKhdYyuLWllJzWa1I5lMBulZEg+SXXCym4HlVnv9+ChKpX2bK0MaEBgAIgTlHsdJV8nwYyUIUOtYbCIQMFBzv14cq9fWrR1BFBqBckEqZcKoD8Z86JqlGzmKUqk7S8thFFXLpWIhUFqZyOjSAMLIGKMLBVhrjLEiS3ebw2sGbRRBmGjN6UdSG/r9PW/HpSdIikANFKfP/Lz/k6Pbnnp87vyl+SvXz81fqw2tODY9Oz760N6PDgsYRub8/NXPjk63W53Hpqb2HTgUKDU+8bDpdFR6uhJEil+68ggIWPP01s2TE2Oj6yeu//XvlydOz52/BOD63zfbnfDmYuPg4eMLi41bjaVnntxy4fKfVy9fPjV77pvvZ60xdBvG7hOAfm/Pbp/hrnWssZGxmzaMtpaXn9u2dWxdrV4bBlV9ZHjjI/XJDaP12upKeWDmp3OvvLC92Wpv2Ti+dmR47fCqSrUi1pIx6xgX2UecAyGJQEsnZCGACEgxhkGAyEApBBrGwAq0ggisoFSEtbbZTpwXSbdyBtITxk1w6UqkT/ftMCmSzBKb7AGxApDKR0WcpiDDuKT0SXx+v8UQVqQwe4gIqJSHsuTYEzI10HsksM/VR5ydHHWd1hJUO5h2ZRc88CooPYDMwMbdM0S82x+75wLTFMVEZxfdyS456eeB7NlncuFIINVDU+aSQ6QNl1SIuXsqM7gTb8y/tuTvAylRmWGsYzkzHmSvyX2S/R8tJkrpITLXwgAAAABJRU5ErkJggg=="><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"><style>
+:root{--indigo:#1B1F3B;--indigo-700:#2A2F55;--cyan:#2DE2E6;--cyan-ink:#0C93A0;--gold:#F4B942;--gold-ink:#B7860B;--mist:#E6E9F0;--mist-50:#F6F8FB;--slate:#565D75;--line:#E5E9F1;--white:#ffffff;--maxw:1200px}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',system-ui,sans-serif;color:var(--slate);background:#fff;line-height:1.65;-webkit-font-smoothing:antialiased;font-size:16px}
+h1,h2,h3,h4{font-family:'Inter',sans-serif;color:var(--indigo);line-height:1.18;letter-spacing:-0.02em;font-weight:700}
+h1{font-weight:800}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
+.eyebrow{font-size:.76rem;letter-spacing:.16em;text-transform:uppercase;color:var(--cyan-ink);display:inline-flex;align-items:center;gap:10px;font-weight:700}
+.eyebrow::before{content:"";width:24px;height:2px;background:var(--cyan);border-radius:2px}
+.eyebrow.center{justify-content:center}
+.eyebrow.gold{color:var(--gold-ink)}
+.eyebrow.gold::before{background:var(--gold)}
+/* NAV */
+.nav{position:sticky;top:0;z-index:60;background:rgba(255,255,255,.92);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;height:72px}
+.nav-logo img{height:40px;width:auto;object-fit:contain}
+.nav-menu{display:flex;align-items:center;gap:28px}
+.nav-menu a.link{font-size:.94rem;color:var(--indigo);font-weight:500;position:relative;padding:4px 0;cursor:pointer;white-space:nowrap}
+.nav-menu a.link:hover{color:var(--cyan-ink)}
+.nav-menu a.link.active{color:var(--cyan-ink)}
+.nav-menu a.link.active::after{content:"";position:absolute;left:0;right:0;bottom:-2px;height:2px;background:var(--cyan);border-radius:2px}
+.btn{display:inline-flex;align-items:center;gap:9px;font-weight:600;font-size:.95rem;border-radius:9px;padding:12px 24px;cursor:pointer;transition:transform .18s,box-shadow .18s,background .18s;border:1.6px solid transparent;white-space:nowrap}
+.btn-primary{background:var(--indigo);color:#fff}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 26px rgba(27,31,59,.22)}
+.btn-secondary{background:#fff;color:var(--indigo);border-color:var(--indigo)}
+.btn-secondary:hover{background:var(--mist-50);transform:translateY(-2px)}
+.btn-cyan{background:var(--cyan);color:var(--indigo)}
+.btn-cyan:hover{transform:translateY(-2px);box-shadow:0 12px 26px rgba(45,226,230,.32)}
+.btn-ghost-light{background:transparent;color:#fff;border-color:rgba(255,255,255,.4)}
+.btn-ghost-light:hover{background:rgba(255,255,255,.1);border-color:#fff}
+.nav-toggle{display:none;background:none;border:0;cursor:pointer;padding:8px}
+.nav-toggle span{display:block;width:24px;height:2px;background:var(--indigo);margin:5px 0;border-radius:2px}
+/* PAGES */
+.page{display:none}.page.active{display:block;animation:pagein .4s ease}
+@keyframes pagein{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+/* SECTIONS */
+.sec{padding:64px 0}
+.sec-mist{background:var(--mist-50);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.sec-head{max-width:720px;margin:0 auto 36px;text-align:center}
+.sec-head.left{margin-left:0;text-align:left;max-width:760px}
+.sec-head h2{font-size:clamp(1.8rem,3.8vw,2.5rem);margin:14px 0 12px}
+.sec-head p{font-size:1.05rem;color:var(--slate);max-width:640px}
+.sec-head.left p{max-width:none}
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .55s ease,transform .55s ease}
+.reveal.in{opacity:1;transform:none}
+/* HERO */
+.hero{padding:48px 0 52px}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
+.hero h1{font-size:clamp(2.2rem,4.8vw,3.2rem);margin:14px 0 16px}
+.hero h1 .u{background:linear-gradient(transparent 62%,rgba(45,226,230,.42) 62%)}
+.hero p.lead{font-size:1.1rem;max-width:540px;margin-bottom:22px}
+.hero-cta{display:flex;gap:14px;flex-wrap:wrap}
+.credit{display:inline-flex;align-items:center;gap:10px;margin-top:16px;font-size:.9rem;color:var(--indigo);background:var(--mist-50);border:1px solid var(--line);border-radius:999px;padding:8px 16px}
+.credit .dot{width:8px;height:8px;border-radius:50%;background:var(--cyan);flex:none;box-shadow:0 0 0 4px rgba(45,226,230,.18)}
+.hero-visual{position:relative}
+.dash{width:100%;height:auto;filter:drop-shadow(0 24px 48px rgba(27,31,59,.13))}
+@keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+.floaty{animation:floaty 6s ease-in-out infinite}
+/* GRIDS */
+.grid{display:grid;gap:20px;align-items:stretch}
+.g2{grid-template-columns:repeat(2,1fr)}.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(4,1fr)}
+/* CARDS */
+.card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:26px;transition:transform .2s,border-color .2s,box-shadow .2s;display:flex;flex-direction:column}
+.card:hover{transform:translateY(-4px);border-color:var(--cyan);box-shadow:0 16px 36px rgba(27,31,59,.07)}
+.card h3{font-size:1.15rem;margin-bottom:8px}.card p{font-size:.95rem;flex:1}
+.icon{width:44px;height:44px;border-radius:10px;display:grid;place-items:center;margin-bottom:14px;background:var(--mist)}
+.icon svg{width:22px;height:22px}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}
+.chip{font-size:.8rem;font-weight:500;color:var(--indigo);background:var(--mist-50);border:1px solid var(--line);border-radius:999px;padding:5px 12px}
+/* AUDIENCE CARDS */
+.aud .emoji{font-size:1.6rem;margin-bottom:10px;display:block}
+.aud h3{font-size:1.05rem}
+.aud .earn{display:inline-block;margin-top:12px;font-size:.7rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--cyan-ink);background:rgba(45,226,230,.1);border-radius:999px;padding:4px 10px}
+/* SPLIT */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.split .box{border-radius:18px;padding:34px;border:1px solid var(--line);display:flex;flex-direction:column}
+.split .learn{background:var(--mist-50)}.split .biz{background:var(--indigo);color:#c9cde3}.split .biz h3{color:#fff}
+.split .box h3{font-size:1.5rem;margin-bottom:14px}.split .box .btn{margin-top:auto}
+/* METHOD */
+.method{background:var(--indigo);color:#cfd3e6}
+.method .eyebrow{color:var(--cyan)}.method .eyebrow::before{background:var(--cyan)}
+.method h2{color:#fff}.method .sec-head p{color:#aeb3cc}
+.flow{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:8px}
+.node{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:28px 22px;text-align:center}
+.node .step{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--cyan);margin-bottom:14px;font-weight:700}
+.node .ring{width:60px;height:60px;border-radius:50%;margin:0 auto 16px;display:grid;place-items:center;border:2px solid rgba(45,226,230,.5);background:rgba(45,226,230,.08)}
+.node .ring svg{width:28px;height:28px}
+.node h3{color:#fff;font-size:1.2rem;margin-bottom:8px}.node p{color:#aeb3cc;font-size:.92rem}
+.node.action .step{color:var(--gold)}.node.action .ring{border-color:rgba(244,185,66,.55);background:rgba(244,185,66,.1)}
+/* JOURNEY */
+.journey{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:center;max-width:960px;margin:0 auto}
+.jstep{font-weight:600;color:var(--indigo);background:#fff;border:1px solid var(--line);border-radius:10px;padding:10px 16px;font-size:.95rem;white-space:nowrap}
+.jstep.final{background:var(--indigo);color:#fff;border-color:var(--indigo)}.jstep.final::after{content:" ✓";color:var(--cyan)}
+.jarrow{color:var(--cyan-ink);font-weight:700}
+/* FOUNDER */
+.founder{display:grid;grid-template-columns:.7fr 1.3fr;gap:48px;align-items:center}
+.avatar{width:200px;height:200px;border-radius:50%;background:var(--mist);display:grid;place-items:center;border:3px solid #fff;box-shadow:0 18px 40px rgba(27,31,59,.14);margin:0 auto;position:relative;overflow:hidden}
+.avatar .mono-initial{font-weight:800;font-size:4.5rem;color:var(--indigo)}
+.avatar-ring{position:absolute;inset:-8px;border-radius:50%;border:2px dashed var(--cyan);opacity:.5}
+.founder blockquote{font-size:1.02rem;color:var(--slate);margin:16px 0}.founder .sign{font-weight:700;color:var(--indigo)}
+/* PAGE HERO */
+.phero{padding:40px 0 20px}.phero h1{font-size:clamp(2rem,4.2vw,2.8rem);margin:14px 0 12px}.phero p{font-size:1.08rem;max-width:680px}
+/* PATH LINK */
+.path-link{display:inline-flex;align-items:center;gap:8px;font-weight:600;color:var(--indigo);cursor:pointer;font-size:.92rem}
+.path-link .arrow{transition:transform .2s}.path-link:hover .arrow{transform:translateX(4px)}
+/* STOPS */
+.stop{display:grid;grid-template-columns:56px 1fr;gap:20px;padding:22px 0;border-top:1px solid var(--line);align-items:start}
+.stop:last-child{border-bottom:1px solid var(--line)}
+.stop .num{font-weight:800;font-size:1.5rem;color:var(--cyan-ink)}.stop h3{font-size:1.3rem;margin-bottom:6px}
+/* OUTCOMES */
+.outcome{margin-top:14px;background:var(--mist-50);border-left:3px solid var(--gold);border-radius:0 8px 8px 0;padding:12px 16px}
+.outcome .lbl{font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold-ink);font-weight:700}
+.outcome .txt{font-weight:700;color:var(--indigo);font-size:.98rem}
+/* PRICING */
+.price-wrap{display:grid;grid-template-columns:1.1fr 1fr;gap:22px;align-items:stretch}
+.plan-feat{position:relative;border:1.5px solid var(--gold);border-radius:18px;padding:34px;background:#fff;overflow:hidden}
+.plan-feat::before{content:"";position:absolute;top:-50%;right:-15%;width:300px;height:300px;background:radial-gradient(circle,rgba(244,185,66,.12),transparent 70%)}
+.badge-best{position:relative;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-ink);border:1px solid var(--gold);border-radius:999px;padding:4px 12px;display:inline-block;margin-bottom:18px;font-weight:700}
+.plan-feat h3{position:relative;font-size:1.4rem;margin-bottom:6px}
+.plan-feat .sub{position:relative;color:var(--slate);margin-bottom:20px}
+.price-big{position:relative;display:flex;align-items:baseline;gap:12px;margin-bottom:6px}
+.price-big .amt{font-weight:800;font-size:2.8rem;color:var(--indigo)}.price-big .was{color:var(--slate);text-decoration:line-through}
+.save-tag{position:relative;display:inline-block;font-size:.76rem;color:var(--indigo);background:var(--gold);padding:4px 10px;border-radius:6px;font-weight:700;margin-bottom:20px}
+.plan-feat ul{position:relative;list-style:none;margin-bottom:24px}
+.plan-feat li{padding:8px 0;border-bottom:1px solid var(--line);color:var(--slate);display:flex;gap:10px;font-size:.94rem}
+.plan-feat li::before{content:"→";color:var(--cyan-ink);font-weight:700}
+.plan-feat .btn{position:relative;width:100%;justify-content:center}
+.plan-side{border:1px solid var(--line);border-radius:18px;padding:30px;background:var(--mist-50);display:flex;flex-direction:column}
+.plan-side h3{font-size:1.1rem;margin-bottom:6px}.plan-side>p{color:var(--slate);font-size:.93rem;margin-bottom:18px}
+.mini{display:flex;justify-content:space-between;align-items:center;padding:13px 0;border-top:1px solid var(--line)}
+.mini:first-of-type{border-top:none}.mini .nm{font-weight:600;color:var(--indigo)}.mini .nm span{display:block;font-weight:400;font-size:.82rem;color:var(--slate)}
+.mini .amt{font-weight:700;color:var(--indigo);font-size:1.1rem}
+.plan-note{margin-top:auto;padding-top:16px;font-size:.82rem;color:var(--slate)}
+/* COHORT */
+.cohort{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--line);border-radius:18px;overflow:hidden}
+.cohort .left{background:var(--indigo);color:#c9cde3;padding:36px}.cohort .left h3{color:#fff;font-size:1.4rem;margin:12px 0 10px}
+.cohort .right{padding:36px;background:#fff}.cohort ul{list-style:none}
+.cohort li{padding:10px 0;border-bottom:1px solid var(--line);display:flex;gap:10px;align-items:center;color:var(--indigo);font-weight:500;font-size:.94rem}.cohort li:last-child{border-bottom:none}.cohort li .ck{color:var(--cyan-ink);font-weight:700}
+/* VALUES */
+.val{border-left:3px solid var(--cyan);padding:6px 0 6px 20px;margin-bottom:22px}.val h4{font-size:1.08rem;margin-bottom:4px}
+/* BANNER */
+.banner{background:var(--indigo);color:#c9cde3;border-radius:18px;padding:40px;text-align:center}
+.banner h2{color:#fff;font-size:clamp(1.6rem,3.2vw,2.2rem);margin-bottom:12px}.banner p{max-width:560px;margin:0 auto 24px}
+.soon{display:inline-block;font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);border:1px solid rgba(244,185,66,.5);border-radius:999px;padding:5px 13px;margin-bottom:16px;font-weight:700}
+/* PACKAGES */
+.pkg-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.pkg{border:1px solid var(--line);border-radius:14px;padding:28px;background:#fff;text-align:center;display:flex;flex-direction:column}
+.pkg h3{font-size:1.2rem;margin-bottom:6px}.pkg .pkgp{font-size:.93rem;color:var(--slate);margin-bottom:16px}
+.pkg.featured{border-color:var(--gold);box-shadow:0 8px 28px rgba(244,185,66,.1)}
+.pkg ul{list-style:none;text-align:left;margin-bottom:20px;flex:1}.pkg li{padding:7px 0;border-bottom:1px solid var(--line);font-size:.9rem;display:flex;gap:8px}
+.pkg li::before{content:"✓";color:var(--cyan-ink);font-weight:700}
+.pkg .btn{width:100%;justify-content:center;margin-top:auto}
+/* CONSULTING */
+.consult-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.consult-card{border:1px solid var(--line);border-radius:14px;padding:26px;background:#fff;display:flex;flex-direction:column}
+.consult-card h3{font-size:1.1rem;margin-bottom:8px}.consult-card p{font-size:.92rem;color:var(--slate);flex:1}
+.consult-card .tag-row{margin-top:auto;padding-top:12px}
+/* FORM */
+.form-wrap{max-width:840px;margin:0 auto;border:1px solid var(--line);border-radius:18px;overflow:hidden;background:#fff;box-shadow:0 16px 36px rgba(27,31,59,.05)}
+.form-head{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:16px 24px;border-bottom:1px solid var(--line);background:var(--mist-50)}
+.form-head h2{font-size:1.05rem}
+.form-embed iframe{width:100%;height:1180px;border:0;display:block}
+/* CONTACT */
+.contact-methods{display:flex;flex-direction:column;gap:12px;max-width:520px;margin:0 auto}
+.cm{display:flex;align-items:center;gap:14px;border:1px solid var(--line);border-radius:12px;padding:16px 20px;transition:.2s}
+.cm:hover{border-color:var(--cyan);transform:translateY(-2px)}
+.cm .cm-ic{width:40px;height:40px;border-radius:10px;background:var(--mist);display:grid;place-items:center;flex:none}
+.cm .cm-ic svg{width:20px;height:20px}.cm .cm-t{font-weight:600;color:var(--indigo)}.cm .cm-s{font-size:.86rem;color:var(--slate)}
+/* FOOTER */
+.footer{background:var(--indigo);color:#9ea3c0;padding:52px 0 28px}
+.footer-top{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:36px;padding-bottom:34px;border-bottom:1px solid rgba(255,255,255,.1)}
+.footer-logo img{height:44px;width:auto;margin-bottom:14px;object-fit:contain}
+.footer p.tg{max-width:300px;font-size:.93rem}
+.footer h5{color:#fff;font-size:.82rem;letter-spacing:.08em;text-transform:uppercase;margin-bottom:14px;font-weight:700}
+.footer a.fl{display:block;color:#9ea3c0;font-size:.93rem;padding:4px 0;transition:.18s;cursor:pointer}.footer a.fl:hover{color:var(--cyan)}
+.socials{display:flex;gap:10px;margin-top:16px}
+.socials a{width:36px;height:36px;border-radius:9px;background:rgba(255,255,255,.06);display:grid;place-items:center;transition:.2s}
+.socials a:hover{background:var(--cyan)}.socials a:hover svg{stroke:var(--indigo)}
+.socials svg{width:18px;height:18px;stroke:#c9cde3;fill:none;stroke-width:1.8}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-top:22px;font-size:.84rem;flex-wrap:wrap}
+.footer-bottom a{color:#9ea3c0}.footer-bottom a:hover{color:var(--cyan)}
+/* FOCUS */
+:focus-visible{outline:2px solid var(--cyan-ink);outline-offset:3px;border-radius:6px}
+/* RESPONSIVE - TABLET */
+@media(max-width:960px){
+.hero-grid{grid-template-columns:1fr;gap:36px}.hero-visual{order:-1;max-width:480px;margin:0 auto}
+.founder{grid-template-columns:1fr;gap:30px;text-align:center}
+.footer-top{grid-template-columns:1fr 1fr;gap:28px}
+.g4{grid-template-columns:repeat(2,1fr)}
+.price-wrap{grid-template-columns:1fr}
+.cohort{grid-template-columns:1fr}
+.split{grid-template-columns:1fr}
+}
+/* RESPONSIVE - SMALL TABLET / LARGE MOBILE */
+@media(max-width:760px){
+.nav-menu{position:fixed;top:72px;left:0;right:0;background:#fff;flex-direction:column;align-items:stretch;gap:2px;padding:12px 24px 20px;border-bottom:1px solid var(--line);box-shadow:0 18px 28px rgba(27,31,59,.08);transform:translateY(-120%);transition:transform .25s ease;z-index:50}
+.nav-menu.open{transform:translateY(0)}
+.nav-menu a.link{padding:12px 0;width:100%;font-size:1rem}
+.nav-menu .btn{width:100%;justify-content:center;margin-top:6px}
+.nav-toggle{display:block}
+.g2,.g3,.consult-grid,.contact-grid{grid-template-columns:1fr}
+.pkg-grid{grid-template-columns:1fr}
+.flow{grid-template-columns:1fr}
+.sec{padding:48px 0}
+.wrap{padding:0 20px}
+.sec-head h2{font-size:clamp(1.6rem,5vw,2.2rem)}
+.footer-top{grid-template-columns:1fr}
+.feature{grid-template-columns:1fr;gap:24px}
+}
+/* RESPONSIVE - MOBILE */
+@media(max-width:480px){
+.hero h1{font-size:2rem}
+.hero p.lead{font-size:1rem}
+.hero-cta{flex-direction:column}
+.hero-cta .btn{width:100%;justify-content:center}
+.sec{padding:40px 0}
+.card{padding:22px}
+.phero h1{font-size:1.8rem}
+.banner{padding:30px 24px}
+.journey{gap:8px}
+.jstep{padding:8px 12px;font-size:.88rem}
+.pkg{padding:24px}
+.avatar{width:160px;height:160px}
+.avatar .mono-initial{font-size:3.5rem}
+.credit{font-size:.82rem;padding:6px 12px}
+}
+/* REDUCED MOTION */
+@media(prefers-reduced-motion:reduce){*{animation:none!important;scroll-behavior:auto!important}.reveal{opacity:1;transform:none;transition:none}.page.active{animation:none}}
+</style></head><body>
+<header class="nav"><div class="wrap nav-in">
+<a class="nav-logo" href="#home" aria-label="THINDA home"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAABQCAIAAAABc2X6AAAVJUlEQVR42o1cbaxlVXl+n7X3Ph9zv4aBGRhAPoMYQWI/UlI0LdJYWx0EDAipBJtawIJWsbEBqlFoQqsYkYBWoa0JiHSglJYKSBGBSLTYUluwDSjyMSMMM8wMdz7u3HvO2Ws9/bHXXvtda+8zMCHce8+9Z++91nrX+z7v8zzrwC5tgwhFIG/0H8MX+Hft/+2sfw39dhHE38d3wOs8AfyVod7M+FJUTxheMukw3sA/UEQE6lqY/mCkf4v+Y9RvQfdcvqGnoagLiQjpf6L/NdrXB4wIGV+eyf3a98brPSgpJIWoR73fUBFJnmA/y6sWEellkf6EjjsbP/B6bqpgoQoSojUTbM0OqgHWq++nBH59Q1Qkb0M8g2zHJeNXW+vVsSqMBo50rkw1IKob13dgGl+I5pZhNqBvDhEhyOqFrkeivlRr6ahmST0yfCBiyuAhAjbZgs1cUSSEG4V5kiQYzx+7MwnrO+iXoXISostET9J1LwrRvA5E14G6zn42PsJyIU1jdRgSIaTTPMPuXMmO/RZNM/USVgMRVhsG0/cnkslsVQM1Uobn9//5XMVpKSjMWRXrRsDoj9DkX3TtAiIJNf2krS1HFYldYRiiAKGSIFwFekampl5UA6hjHWhneojA3wJ5EzKt+efU3AyfdBBFUFxum1CAqpcISa4r9VLlOkSRD7RCrr55nS+EwiapRIESNglo1GJMTfM6lMIwiKTOV4GBrlKCKASg79l8pZ9UUpUUqu+SKseO3KHTqM+AIYtVk5lPqXnsyKT+BcZVCexMI9CRGocoqX6jF4BQCIV6hdnUN2lQVhVroZKinavQeigzrXJzyoZD/Xgp+iCbQhBHdpQQdcIgdAbaH+aoaly0BgjzgBYUQgQ+2sAjZIQIJrfzpf4KUVvOz4QabgCVrcrptydFBGSUmcDkpvET0AO4KHbr1e5eIEqU68hqwM38Ic5P1YWYlq2m5ER7SdqbmFWeBiRtOJAW9jo6kmdsJU6oTR+e0sOgVkFCKxsZRAWYVDu0jUbR2r1NkdPTQQFj7KVQSNfGUeuk0zE1rABQZUp2VJ2OCGYatCIQycMTEW1EhQjdA1Htg94AiHop6ALKeqcFtE6FrVm1OQhJn1QtiC9+BkgwWCiBqhLFWSrKYk1GydWGENRVm0lNUqgNEagSVE9UY8ckXZLMjJFeHieH6W0n0THnFI7HIuheDlahXWFwtRDoBjt5c1mSQNhdbOdMxLEWKky87etX6Ryzfm+yMt60eWtmDF+/u6VCCOGpxFp77BHr6nshqTo14gfTVosKs4YvzJn0sUjwRDtMOvqfGCpRINYyH/Zfe233H3zsmkd//NRw0HNO537VlfnSqLe5D/ssM4u7lq698sLLLj7HLq8gS+afugAiZHCdqVBtn7Aqkne0gNHEQ0N7qN1MX0iogJTHq865fNXg5S3bz774qh89/j+r5mf3La+0ogT06NT/v5kvERHJDBa37v74Rz942SXn2n3LyIy0y7V/l6ZgPMDUqDfq3ezStuYtMZxCvaBJ0lRxRZG0u3WOpldseWX7u8+//P9++vNVq+fK0jbbPCHQojzcvGgys7y45+wz37XxG1dJWQqdwDRIFRrspHQAYhyRLGEe9Xs1RK9Wi2n4Amn97ODwSKIorv/mPc/+YvOhR6wfT0owRi5QHU2rmxORzJiV5ZXfPO3kv7vuctA5R2OMZknq0CWg4U03x5bkSdilbcIArVHzNUlf0gGeOaVREIi19sWXt5dl2eLKxBiYzKgNxJh/cCIEUJb28PUHzcwO7XhiMqP6doqAPpIrSE6/ZBExGpUqvdSwe7cBQhJAJ5EQbxt2pXydYcU5l83OiAw6mj+BSCnlcnpJwHcB2VCQ+7+cWGctjCEt7JKaFYWiga5lTB9SDyHXUELSdWWLQEYXgQwKQRJwZD4z3HjXgz977pe9PHeMANdoNDnprUef8Z5T3KSslsA5KXKze+yMyDDP3OKjMn5FUFTIACZzdox8FmveqcsL2zxS/DyIckNU0fMpyBZJNsI0UkcavshaV8zN33jzHR+//DpxNs0eWSaLu886f8NZp5/qJqUxpqQUfTy7e/LpZxZvOuGA2bxXvnCzvPqgFHNCK8jEjUlTvO3LkvXEjoSmAmJ6ITQVXxMCVFxj2r3mgUDD/mjhBOM2zUPIvHQs5hZuvf2eyz5/49zq2bzInKMoljrPsz15tjA7U0FJSxaF+fme8vd/vHWZHFY1Nh9IPot8RijkhNIrTvySWb+Bk52QLJR6lfSAlG+LRhsNhgIg70pmur/RDQAj+oYhbQidZMP+rbf/6wV/eo0Ys3d5hUsecoLM8rwocgrL0lrnROjIIs+eWhx/4Iltv1ianLDQt6wKw1jcPrE5ORH0ixOuwfr3crwDJk+SZtWGAYh0l3j3dYZjXgOGqKJ1ol7E7GKDSEWMgR1N1izM/uNNVxe5sc5XNOvccHZu4z8/eOsd988fMC/iwWue4fllt+GJVzftneQZyuq6bmyOvBCHnEUUkFL6B5vVv87Jopicij2vEoYwjUcAcYvDTsUqlziPs1WEku+SG9Von0bwvve+M63M1kq28PTTz94yKQGIoIpzAM8ujTctl7NFtmQtqj6X1qw+WZAZ3wdY2n0iBjrLQoSewyaTLFatCBFzDqGfQL3CUYOHLl6HMTPAJHgACgEp9y4FgAgHMSxLV8wVy6OxD/3AOwgL2gJ0ZESGumXU6IkQIFORpwaChGL3sA/U3Xa9hJqWYDXgpo5yClHezXWhaY5EhJkxTUEGBHRGsswYQDVANVcL42pUTt1YB7RXLRd0y1In4GliQJegmTQcpiU/aipHpdmWlMbwgLGagxZqZMpcJulCNdctjiJGPIg4YYhi7f00U0DupxOl8ZMKsGInIt4Eii5WoqJWeHW2oxp5xA/VlF5DIWGqdBqWqX57RYeivggVjxWBAS8SUfYr9Zok0yV/qhVcChJKEYpgR+ACO/VMtKVpQXfvQA1XqFWMuAUhKhTSoZCwkXiScIFJSE60ZWpGvHzVQyGwbgxUopfNAg8hUwlA1fG0GOHqajqDAumD6R2CqKhU0TrNRuFDej/xhaAEpxQu228h0TBbyRBaNZ4hWaVMKRuHBANlhS6+qU6BIbLC4KF3Y6x7GOlohvTGRAPGE4EqYt8qEQeQFocjiAKIndpzqgZKaw7YIXfpikXP4zPW1kWnfBGK0VOpibiKPRERoppvqryNuIf3KM9vHG9/YGhaVJBRNSg+vwMJIu7wlFClw2Zl0NgUlBJDDTPRpBpfEE0YXrNlOa3o6l+ncLsppmzrYQ3JHInTUOGYLKdm8dsFM5KqYkVH9Q9dwwhEUYXuUo3G871oUjGaXUe2+KyI35QuaxDJWCBlR/ZglNOo7Ah4XTtQa6aTd5n60eDZTCAV32vmFTH9Fan32gWkvC2QdrZmmmep9J6uLa1pDaZJK6qFKoe1ZEC/ljR6VhjfJ6HvWAlD9MGQ0q71+gdmvGaKkRB4TexAMqFA9k4cu3YvdGihOxTqfcw6lcQlW/snoEO6aX4CqNZgJukfarXbI90Y+oZR1W01lawY+g7AQGT3xEHkd9eumslMIIDDnAQCLqqIaGN7kpEhB6xQIwM+DLGWN8DM1+xqnlKDZKyZBRzClgyqVxzxWgggxvj5mYg4kQ8ePveJI+dOWTOgY5BAyUgqEWp2EhLj30C7dCDomGxWppa6/if4OMhTbdGHzb4nSKR+LW9f0MxYZgwp4/FEII5yTB+Pnrz+HQcORGhLF3jLzv2uGtJuqIw4EjmdhssbN04Llmq+LFRlKsmScdGIUIeS5IwBgMVde4Q89qg3iYizPGZVccys2IkVoOofiQRvvDG/K6XpUHXBREvIFUrQh4lOWihOSyr4PbJSPJdfIW980B06llbGHE1OP/1dl15wxu+c8naujLMMjnRWTKxleJqGsdjFKTYq1WBoZycaTg6pVU8Iu7S1+XvK/pwS0HwvAhlWSQHa9dK0N5bZcHjfvz1WOr7/fb8lELe0D42rSmlyoluSeKzsKFX1oNj665o7hKAlBVRSy1btd2VikmzSDSX1IHkmqSbPgh0plhqcw6AneW737nOOWWYQLARena1SALqYNbKroWpHfDVnADvJOS235OHRYykDcepjgN+eJaVj0HshgBgxVZA4shpUZXYwBnZlTI4hYkyDd51z8JgFpCNpjKlSoKsqCgljmspeLSvFOWeMafUb9ey34DhjcRt279ZYSgnKjfo2qn0EBf2e5LmIE4rAyGTMcSkC5EaKnCtjIVFkkudcGVXzaXo9MeDK2KvBw75MSjcpAaBfiMCNRiIwMDLoefC1PCpLm/kSXQfscCArI+ccUlEbUJx5amlu1MO9Wzv5uiaqUJcf37gQefbs81tefuXVfr8nMKPR6M1HHXrIwWtEsH3H4svbXjvxzUeYPN+6bcfW7btOOv4IUpBnz2/aOhqN33Lcm1haZNlTT79wyEEL69atId3zL24lecxRh4q149L99GcvLq+MMiNvO/7o2TULbmkfKrkUppyU//X0Cycce9jMzNCVDoj7w6DXBrDXUNUIZUlbUXz2obQsg368Yq0rZma/ftt3vrnxfjHGwFGya6/4yB+dv0GMeeAHP/nLG771xD03Dlav+qcHfvi1b9375L1fJa3pz1/7jTs3b9n2ndu+NFlZ7K0aXnzlVyDyyF1fyQezf/216wlz83V/wX27dr62eMZFnx2tjIfDQSa47nN/cuaG37ZLy06kmBve/9CjZ5x92VdvuPKSC89xu3dnmUm6kwgeU9qkuvGkSCAVtIzogXtld/Gm0DzPuG/pqk986Ln/vPPXTjzuvPe/+7nH7zx3w6nlvhUR42xZFMXsgQfk2ez87Cpq45xRAebc/MzwR9/798/81c0GA0uKOKVP49Yv//lTD9/2kXN/78Of+uKLL7yU9QsIxdq/3XjvUccf/e1/eWi8tDfLs1SwVSc/YmtOE9SG6VkDokHqTQcY+MAKcczODFfPz+V5Nhj2Fubnh71KsuFg0N+0ecuZF1x+3kWf/sLfbBz2c0eXcHqVtWNUln948Tl/f+cDDz/yyNo1s84pHzjM6oW5hfnBZ/7sw+vWHXT/9/9DeoO833/yyWeeeubF7278wmu7lr7/2H+bVUPnCMT9lLe+Te2/jMQ+S9bOsMCsIqVnSJHSOtJS6KwjrWWdwcleYU56yzEnvfXYIw5dSzakK7TH0WDv0vK73/Er13/+0gs+ec2TT28aDvqaAkNlfHUyWlnOciNC6fVuuft7o9Hk2c07SXfLXQ+KZIkKQ83fIq6u9dqbVP8lU2Gmpr2pLJlVFNB560C4+Gg8Wbdu7dVX/PGVn/zoeWectm9lYtCIbs46PXvbduz60LkfOPWUX73/H+6dGfarqBaRsrRbXt25+aXtl1xx3fLYbjjtN8ROdr268+7vPnb4+rXX3XT76oW5h374k18+/2I26DvnwgmOTr2EjNYrT5vPGDh4yAwFnqrc5ygig0Gv3+tpK1NRFL0iX9q5a7Aay8srM6sGASL0e8VwOAgM5+zMsFfk5OSGqy99/In/tc5V4WYgM6sGH/vcjUWWrxoO7v76Z9cfuk6Q3ffw42Lyh7/9xZk1C+Xyytvfc9Ed9/3gU5ee71ZGmUmxVrS4cYhWppbWUbkOkAmJj54I8NLWHb0iX3vgarG2ioI9e5Z27l46Yv1ByMzi4t5de/Ydedg6EScw23YsWsv16w6gczBm85bt8zPDhfkhTPbqjkVr5eC1q8VZa92mLdtHo0mW4bijD0e/KJdWsiLb8sp2Cg475CA7KbNe/vIrO6zj4YccRGsrK6bmW73vC5E3gpU71e7dllDRCahGIoOoDgR5Jk7oytDdIzOSGTexEMJkkhlOykrQRZ4LhJPSI56iEOuctSSz6lfW+uJQ5GKMkByNrXMmM0KaoidCOymr58vyXGDcZNJ0Pg0cZdIFBGAMYb3CXUppIouGSzcCSwUPoSwCFFfVutrpAHXQKvLdkBBUagldRdr6LO6cXynTjAQuVtMCFtR+R3UGIDns1XAR+RQHlxcG9RuZ8B0kYAK5FSxnmTLeqhN59TGaunU16viN8f1mTWo0v0djcgio2o/cIPGTVZ5DqPa0/gst0ufdyk8bfKcHHPSJFR0IaKHbqIOJ8H1tRmRjTAyTTL/n9JGvyHkfKxlMughJ1Zf6mYyOfSUL+WYxIcqRdFTTLdBVu8MpDHJy9Cc1xStFo9Z8fQTUfTfjAxFk+7RILNilcqlIMm1RX0x0nj9gp5c4+LZqVNo444PM6/XjCMZ20VSMrPqB2vBMHwlGR74Y6yHsOqBnag88qY/YeMAF9X18joCpuUWfWNSUvI7qME/sUk6km6Bjs4ARN11LtA2QRCBLG6kniCR1uOXSJDptBm4kPGieCKKPeSoxqdmZwfbJ4IkO3FfnYfrmAEKX9tK2ttbpnlTsFRFRXHUNjglciiAPkm5ib1J5DhAmR8ni40YRP97waoydsvqUNOo2VHOgrbKP1DeC9v5sNbPsoP9UbTKa603fCfi1w/4+ggAdP0Ja1V/SvN4+q9OxoMFe7RX0mn9BDP69IbjTkSNBcWLlJ0vugcTn1LJ7pIdH1f6dRrA2ZjnFn6KVWVKGWXVZcdOHTkUXHU6SRoL0GyFvG559HURzWFZTqbqiRtEfKmJdP9GhYrYM1F1se8dyk9FejEFbXJO12wgaMlbf5mqmW6q7KhtMyHWNBMLeAZLWQ2ltqcVJ+MY+RyMl5mWa07cR2hvGV2JC3duHk6Ou8TO1jEzQZEGi4eh9i3ZwtnYGX1dP4bQLoJ3uQ5MK6TCMogEeWupm9HkkSbC2tiW6Pq4hyG3oVOfRnJfEfj+Jo7IvaY9mMhNkDR9CCoG0PxAjmfW84eSpbF4Nj9ltvYzzWOsDLCCN/hJVFahKGSpTdM8InbfCGVO3P9q7Mg4Hf6zDxN44KJaenTIdWqAaou1KtaeL6oSxcr5CRQoav4RIMtqweFM4c9EfZVCJwNoX2PKWhCUxIbmixreoxUF2nESOREkkumiSjdFh/YsepMZ9LeU8NaEiTq1xetYnXZFsN7RObRiNu0WmWJY60jhUjCLxm0LCZ5V4IyGU3Sq8nMKvDjcm0g9eYZTtmH5CQIfXOUZnzNVuos7fSBJ+JNRCEHUnSE7CiI7TyqBJkJF3tNZVoc9j1J/jETRXxFZ8Kk262UdAw6FoYk4SPAAh/x9tv9FipE5/3QAAAABJRU5ErkJggg==" alt="THINDA"></a>
+<button class="nav-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+<nav class="nav-menu" id="navmenu">
+<a class="link" data-page="home" href="#home">Home</a><a class="link" data-page="learn" href="#learn">Learn</a><a class="link" data-page="business" href="#business">Business</a><a class="link" data-page="community" href="#community">Community</a><a class="link" data-page="career" href="#career">Career</a><a class="link" data-page="about" href="#about">About</a>
+<a class="btn btn-primary" data-page="learn" href="#learn">Start Learning</a>
+</nav>
+</div></header><main>
+<div class="page" id="page-home">
+<section class="hero"><div class="wrap hero-grid">
+<div class="reveal">
+<span class="eyebrow">Data education &amp; analytics &middot; Kenya</span>
+<h1>Building practical data skills. <span class="u">Empowering better decisions.</span></h1>
+<p class="lead">THINDA helps individuals build job-ready data skills through practical learning, projects, and career development, while helping organizations train their teams and turn data into better decisions.</p>
+<div class="hero-cta"><a class="btn btn-primary" href="#learn">Start Learning</a><a class="btn btn-secondary" href="#business">Work With THINDA</a></div>
+<div class="credit"><span class="dot"></span>Learn from a working Data Analyst who builds real dashboards for real businesses.</div>
+</div>
+<div class="hero-visual reveal">
+<svg class="dash floaty" viewBox="0 0 560 440" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="THINDA analytics dashboard">
+<rect x="8" y="8" width="544" height="424" rx="20" fill="#ffffff" stroke="#E5E9F1"/>
+<rect x="8" y="8" width="544" height="52" rx="20" fill="#1B1F3B"/><rect x="8" y="40" width="544" height="20" fill="#1B1F3B"/>
+<circle cx="34" cy="34" r="5" fill="#2DE2E6"/><circle cx="52" cy="34" r="5" fill="#F4B942"/><circle cx="70" cy="34" r="5" fill="#E6E9F0"/>
+<text x="270" y="39" text-anchor="middle" font-family="Inter, sans-serif" font-size="13" fill="#aeb3cc">sokoni_overview</text>
+<rect x="32" y="82" width="150" height="70" rx="12" fill="#F6F8FB" stroke="#E5E9F1"/>
+<text x="48" y="106" font-family="Inter, sans-serif" font-size="10" letter-spacing="1" fill="#565D75">REVENUE</text>
+<text x="48" y="134" font-family="Inter, sans-serif" font-weight="800" font-size="22" fill="#1B1F3B">KES 15.7M</text>
+<rect x="205" y="82" width="150" height="70" rx="12" fill="#F6F8FB" stroke="#E5E9F1"/>
+<text x="221" y="106" font-family="Inter, sans-serif" font-size="10" letter-spacing="1" fill="#565D75">ORDERS</text>
+<text x="221" y="134" font-family="Inter, sans-serif" font-weight="800" font-size="22" fill="#1B1F3B">1,200</text>
+<rect x="378" y="82" width="150" height="70" rx="12" fill="#1B1F3B"/>
+<text x="394" y="106" font-family="Inter, sans-serif" font-size="10" letter-spacing="1" fill="#2DE2E6">AVG ORDER</text>
+<text x="394" y="134" font-family="Inter, sans-serif" font-weight="800" font-size="22" fill="#ffffff">KES 13.1K</text>
+<rect x="32" y="172" width="300" height="228" rx="14" fill="#ffffff" stroke="#E5E9F1"/>
+<text x="52" y="200" font-family="Inter, sans-serif" font-weight="700" font-size="13" fill="#1B1F3B">Revenue trend</text>
+<polyline fill="none" stroke="#2DE2E6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" points="56,360 96,338 136,346 176,300 216,312 256,262 300,238"/>
+<polygon points="56,360 96,338 136,346 176,300 216,312 256,262 300,238 300,384 56,384" fill="#2DE2E6" opacity="0.10"/>
+<circle cx="300" cy="238" r="4.5" fill="#1B1F3B"/>
+<rect x="352" y="172" width="176" height="228" rx="14" fill="#ffffff" stroke="#E5E9F1"/>
+<text x="372" y="200" font-family="Inter, sans-serif" font-weight="700" font-size="13" fill="#1B1F3B">By category</text>
+<rect x="372" y="300" width="24" height="70" rx="4" fill="#1B1F3B"/><rect x="404" y="272" width="24" height="98" rx="4" fill="#1B1F3B"/>
+<rect x="436" y="248" width="24" height="122" rx="4" fill="#F4B942"/><rect x="468" y="288" width="24" height="82" rx="4" fill="#1B1F3B"/>
+<rect x="500" y="312" width="24" height="58" rx="4" fill="#E6E9F0"/>
+</svg></div>
+</div></section>
+<section class="sec"><div class="wrap"><div class="sec-head reveal"><span class="eyebrow center">What is THINDA?</span><h2>We bridge learning and real-world problem solving</h2><p>THINDA is a practical data education and analytics company. We help individuals develop job-ready analytics skills, and we help organizations make smarter decisions through data. Not theory for its own sake, but skills and insight that create real impact.</p></div></div></section>
+<section class="sec sec-mist"><div class="wrap"><div class="split reveal">
+<div class="box learn"><h3>For Individuals</h3><p>Learn practical data skills through structured courses, real datasets, hands-on projects, and career development support. Build a portfolio that proves what you can do.</p><ul style="list-style:none;margin:18px 0"><li style="padding:8px 0;display:flex;gap:10px"><span style="color:var(--cyan-ink);font-weight:700">→</span> Learn Excel, SQL, Power BI, Python</li><li style="padding:8px 0;display:flex;gap:10px"><span style="color:var(--cyan-ink);font-weight:700">→</span> Practice on real business problems</li><li style="padding:8px 0;display:flex;gap:10px"><span style="color:var(--cyan-ink);font-weight:700">→</span> Build projects for your portfolio</li><li style="padding:8px 0;display:flex;gap:10px"><span style="color:var(--cyan-ink);font-weight:700">→</span> Prepare for interviews and get career-ready</li></ul><a class="btn btn-primary" href="#learn">Start Learning</a></div>
+<div class="box biz"><h3>For Businesses</h3><p>Train your team in data literacy, get custom dashboards built, automate your reporting, and make better decisions with data.</p><ul style="list-style:none;margin:18px 0;color:#c9cde3"><li style="padding:8px 0;display:flex;gap:10px"><span style="color:var(--gold);font-weight:700">→</span> Employee data analytics training</li><li style="padding:8px 0;display:flex;gap:10px"><span style="color:var(--gold);font-weight:700">→</span> Power BI dashboards and reporting</li><li style="padding:8px 0;display:flex;gap:10px"><span style="color:var(--gold);font-weight:700">→</span> Data automation and KPI design</li><li style="padding:8px 0;display:flex;gap:10px"><span style="color:var(--gold);font-weight:700">→</span> Analytics consulting and strategy</li></ul><a class="btn btn-ghost-light" href="#business">Work With THINDA</a></div>
+</div></div></section>
+<section class="sec method"><div class="wrap"><div class="sec-head reveal"><span class="eyebrow center">How THINDA works</span><h2>The THINDA Approach</h2><p>Analytics starts with understanding the problem before choosing the tools. Our approach follows three principles.</p></div>
+<div class="flow">
+<div class="node reveal"><div class="step">Principle 01</div><div class="ring"><svg viewBox="0 0 24 24" fill="none" stroke="#2DE2E6" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4-4"/></svg></div><h3>Understand the problem</h3><p>Every analysis begins with a business question. What decision needs to be made? What challenge are we solving?</p></div>
+<div class="node reveal"><div class="step">Principle 02</div><div class="ring"><svg viewBox="0 0 24 24" fill="none" stroke="#2DE2E6" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 21h4"/><path d="M12 3a6 6 0 0 0-4 10c.7.7 1 1.3 1 2h6c0-.7.3-1.3 1-2a6 6 0 0 0-4-10z"/></svg></div><h3>Discover insights</h3><p>We use data to uncover patterns, trends, and opportunities. The goal is not just finding numbers, but understanding what they mean.</p></div>
+<div class="node action reveal"><div class="step">Principle 03</div><div class="ring"><svg viewBox="0 0 24 24" fill="none" stroke="#F4B942" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1"/></svg></div><h3>Enable action</h3><p>Insights only create value when they support better decisions. Good analytics helps people and organizations take meaningful action.</p></div>
+</div></div></section>
+<section class="sec"><div class="wrap"><div class="sec-head reveal"><span class="eyebrow center">The learning journey</span><h2>From beginner to career-ready</h2><p>THINDA is not about collecting certificates. Everything points toward one outcome: becoming someone a business is glad to hire.</p></div>
+<div class="journey reveal"><span class="jstep">Learn</span><span class="jarrow">→</span><span class="jstep">Practice</span><span class="jarrow">→</span><span class="jstep">Build projects</span><span class="jarrow">→</span><span class="jstep">Portfolio</span><span class="jarrow">→</span><span class="jstep">Prepare</span><span class="jarrow">→</span><span class="jstep">Apply</span><span class="jarrow">→</span><span class="jstep final">Solve real problems</span></div></div></section>
+<section class="sec sec-mist"><div class="wrap"><div class="sec-head reveal"><span class="eyebrow center">Featured courses</span><h2>Build skills that hold up at work</h2><p>Each course focuses on practical outcomes. You will build something real, not just watch videos.</p></div>
+<div class="grid g3">
+<div class="card reveal"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="#1B1F3B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg></div><h3>Excel for Data Analytics</h3><p>From formulas to pivot tables to dashboards. The foundation every analyst needs.</p><div class="chips"><span class="chip">4-6 weeks</span><span class="chip">Beginner</span></div></div>
+<div class="card reveal"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="#1B1F3B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7V4h16v3M9 20h6M12 4v16"/></svg></div><h3>SQL for Data Analytics</h3><p>Query databases, join tables, filter and aggregate. The language of data.</p><div class="chips"><span class="chip">4-6 weeks</span><span class="chip">Beginner</span></div></div>
+<div class="card reveal"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="#1B1F3B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15l3-4 3 2 4-6"/></svg></div><h3>Power BI for Data Analytics</h3><p>Build interactive dashboards that turn data into decisions. DAX, data modeling, and storytelling.</p><div class="chips"><span class="chip">5-7 weeks</span><span class="chip">Beginner</span></div></div>
+<div class="card reveal"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="#1B1F3B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div><h3>Python for Data Analytics</h3><p>Pandas, visualization, and automation. The tool that scales your analysis.</p><div class="chips"><span class="chip">6-8 weeks</span><span class="chip">Intermediate</span></div></div>
+<div class="card reveal"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="#1B1F3B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-4 10c.7.7 1 1.3 1 2h6c0-.7.3-1.3 1-2a6 6 0 0 0-4-10z"/></svg></div><h3>AI for Data Analytics</h3><p>Use AI tools to accelerate analysis, automate tasks, and enhance decision-making.</p><div class="chips"><span class="chip">3-5 weeks</span><span class="chip">All levels</span></div></div>
+<div class="card reveal"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="#1B1F3B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5a2 2 0 0 1 2-2h12v16H6a2 2 0 0 0-2 2z"/><path d="M18 19H6"/></svg></div><h3>Data Storytelling</h3><p>Present your findings so people act on them. Structure, visuals, and narrative.</p><div class="chips"><span class="chip">2-4 weeks</span><span class="chip">All levels</span></div></div>
+</div></div></section>
+<section class="sec"><div class="wrap"><div class="sec-head reveal"><span class="eyebrow center gold">Project Friday</span><h2>Practice on real business problems every week</h2><p>Every Friday, THINDA learners work on a practical business problem using the tools they are learning. Build your portfolio as you learn, not after you graduate.</p></div>
+<div class="grid g3">
+<div class="card reveal"><h3>Real datasets</h3><p>Work with data that looks and behaves like what you will see at work. No toy examples.</p></div>
+<div class="card reveal"><h3>Business context</h3><p>Every project starts with a business question. You learn to think like an analyst, not just use tools.</p></div>
+<div class="card reveal"><h3>Portfolio-ready</h3><p>Completed projects go straight into your portfolio. By course end, you have proof of what you can do.</p></div>
+</div></div></section>
+<section class="sec sec-mist"><div class="wrap"><div class="sec-head reveal"><span class="eyebrow center">Who THINDA is for</span><h2>Turn data into a skill that earns</h2><p>THINDA is built for people starting from zero who want a skill that pays. You do not need experience or expensive software. You need a plan and the willingness to practice.</p></div>
+<div class="grid g4">
+<div class="card aud reveal"><span class="emoji">🎓</span><h3>School leavers</h3><p>Just finished high school? Build a skill that earns real money while you decide what is next.</p><span class="earn">Earn before college</span></div>
+<div class="card aud reveal"><span class="emoji">📚</span><h3>University students</h3><p>Add employable, real-world skills that set you apart well before you graduate.</p><span class="earn">Get ahead early</span></div>
+<div class="card aud reveal"><span class="emoji">🔁</span><h3>Career switchers</h3><p>Moving into data from another field? We take you from spreadsheets to dashboards, step by step.</p><span class="earn">Change your path</span></div>
+<div class="card aud reveal"><span class="emoji">✨</span><h3>Curious beginners</h3><p>Always wondered what data analytics means? Start here and actually do the work.</p><span class="earn">Start from zero</span></div>
+</div></div></section>
+<section class="sec"><div class="wrap"><div class="founder reveal">
+<div><div class="avatar"><span class="mono-initial">A</span><div class="avatar-ring"></div></div></div>
+<div><span class="eyebrow">Founder</span><h2>Abijah Kabiro</h2><blockquote>I started THINDA because I saw too many people learning data analytics the wrong way: collecting certificates without building real capability. THINDA exists to close that gap. Every course, every project, every resource is designed to help you do the actual work, not just talk about it.</blockquote><p class="sign">Abijah Kabiro, Data Analyst</p></div>
+</div></div></section>
+<section class="sec sec-mist"><div class="wrap"><div class="split reveal">
+<div class="box learn"><h3>Ready to learn?</h3><p>Explore our courses, start with a free preview lesson, and begin building practical data skills today.</p><a class="btn btn-primary" href="#learn">Start Learning</a></div>
+<div class="box biz"><h3>Need data support?</h3><p>Whether you need employee training, dashboards, or analytics consulting, THINDA can help your business make better decisions.</p><a class="btn btn-ghost-light" href="#business">Work With THINDA</a></div>
+</div></div></section>
+</div>
+<div class="page" id="page-learn">
+<section class="phero"><div class="wrap reveal"><span class="eyebrow">THINDA Learn</span><h1>Build practical data skills that get you hired</h1><p>Structured courses, real datasets, hands-on projects, mentorship, and career support. Every course answers one question: what can you actually DO after completing it?</p></div></section>
+<section class="sec"><div class="wrap"><div class="sec-head left reveal"><h2>Career Paths</h2><p>Follow a structured path from beginner to job-ready. Each path combines multiple courses into a complete learning journey.</p></div>
+<div class="grid g2">
+<div class="card reveal"><h3>Data Analytics Foundations</h3><p>Excel + SQL + Data Storytelling. The essential skills every analyst needs to start.</p><div class="chips"><span class="chip">3 courses</span><span class="chip">12-16 weeks</span><span class="chip">Beginner</span></div></div>
+<div class="card reveal"><h3>BI Analyst</h3><p>SQL + Power BI + Data Storytelling. Build dashboards and reports that drive business decisions.</p><div class="chips"><span class="chip">3 courses</span><span class="chip">14-18 weeks</span><span class="chip">Beginner to Intermediate</span></div></div>
+<div class="card reveal"><h3>Data Analyst</h3><p>Excel + SQL + Python + Power BI. The full analytical toolkit for a data analyst role.</p><div class="chips"><span class="chip">4 courses</span><span class="chip">20-26 weeks</span><span class="chip">Beginner to Intermediate</span></div></div>
+<div class="card reveal"><h3>AI for Data Analytics</h3><p>Learn to use AI tools to accelerate your analytical work and automate routine tasks.</p><div class="chips"><span class="chip">1 course</span><span class="chip">3-5 weeks</span><span class="chip">All levels</span></div></div>
+</div></div></section>
+<section class="sec sec-mist"><div class="wrap"><div class="sec-head left reveal"><h2>How learning works at THINDA</h2><p>THINDA is not a library of random videos. Every course follows a structured path designed to build real capability.</p></div>
+<div class="grid g3">
+<div class="card reveal"><h3>Structured cohorts</h3><p>Learn alongside a group. Modules unlock weekly so everyone progresses together. Accountability built in.</p></div>
+<div class="card reveal"><h3>Short, focused lessons</h3><p>Video lessons run 5 to 15 minutes. Written notes, examples, and downloadable resources alongside every lesson.</p></div>
+<div class="card reveal"><h3>Quizzes and assessments</h3><p>Test your understanding at every stage. Automatic grading with feedback so you know where to improve.</p></div>
+<div class="card reveal"><h3>Project Friday</h3><p>Every week, work on a real business problem. Build your portfolio as you learn, not after you finish.</p></div>
+<div class="card reveal"><h3>Mentorship</h3><p>Connect with experienced analysts who guide your learning and career development.</p></div>
+<div class="card reveal"><h3>Certificates</h3><p>Earn a certificate after meeting all completion criteria. Three achievement levels: Standard, Merit, Distinction. Every certificate is publicly verifiable.</p></div>
+</div></div></section>
+<section class="sec"><div class="wrap"><div class="sec-head left reveal"><h2>Courses</h2><p>Each course is designed around one question: what can you actually DO after completing it?</p></div>
+<div class="grid g3">
+<div class="card reveal"><h3>Excel for Data Analytics</h3><p>Formulas, pivot tables, charts, data cleaning, and dashboard building. The foundation every analyst needs.</p><div class="chips"><span class="chip">4-6 weeks</span><span class="chip">Beginner</span></div><div style="margin-top:18px"><a class="path-link" href="#about">Preview first lesson <span class="arrow">→</span></a></div></div>
+<div class="card reveal"><h3>SQL for Data Analytics</h3><p>Query databases, join tables, filter, aggregate, and write analytical queries that answer business questions.</p><div class="chips"><span class="chip">4-6 weeks</span><span class="chip">Beginner</span></div><div style="margin-top:18px"><a class="path-link" href="#about">Preview first lesson <span class="arrow">→</span></a></div></div>
+<div class="card reveal"><h3>Power BI for Data Analytics</h3><p>Data modeling, DAX measures, interactive dashboards, and data storytelling for business decisions.</p><div class="chips"><span class="chip">5-7 weeks</span><span class="chip">Beginner</span></div><div style="margin-top:18px"><a class="path-link" href="#about">Preview first lesson <span class="arrow">→</span></a></div></div>
+<div class="card reveal"><h3>Python for Data Analytics</h3><p>Pandas, data cleaning, visualization, and automation. The tool that scales your analysis.</p><div class="chips"><span class="chip">6-8 weeks</span><span class="chip">Intermediate</span></div><div style="margin-top:18px"><a class="path-link" href="#about">Preview first lesson <span class="arrow">→</span></a></div></div>
+<div class="card reveal"><h3>AI for Data Analytics</h3><p>Use AI tools to write queries, clean data, build visualizations, and accelerate every stage of analysis.</p><div class="chips"><span class="chip">3-5 weeks</span><span class="chip">All levels</span></div><div style="margin-top:18px"><a class="path-link" href="#about">Preview first lesson <span class="arrow">→</span></a></div></div>
+<div class="card reveal"><h3>Data Storytelling</h3><p>Structure your findings, choose the right visuals, and present so people act on your analysis.</p><div class="chips"><span class="chip">2-4 weeks</span><span class="chip">All levels</span></div><div style="margin-top:18px"><a class="path-link" href="#about">Preview first lesson <span class="arrow">→</span></a></div></div>
+</div></div></section>
+<section class="sec sec-mist"><div class="wrap"><div class="sec-head reveal"><span class="eyebrow center">Sponsorship</span><h2>THINDA Sponsored Seats</h2><p>Sponsored seats may be available per cohort, subject to cohort capacity and sponsorship availability. If cost is a barrier to learning, apply and tell us your situation.</p></div>
+<div class="banner reveal"><h2>Apply for a sponsored seat</h2><p>We believe talent should not be limited by financial circumstances. Sponsored learners receive full course access at no cost.</p><a class="btn btn-cyan" href="#about">Apply Now</a></div>
+</div></section>
+</div>
+<div class="page" id="page-business">
+<section class="phero"><div class="wrap reveal"><span class="eyebrow gold">THINDA Business</span><h1>Train your team. Turn data into decisions.</h1><p>THINDA helps organizations build internal data capability through employee training, analytics consulting, dashboard development, and reporting automation.</p></div></section>
+<section class="sec"><div class="wrap"><div class="sec-head left reveal"><h2>Corporate Training</h2><p>Upskill your team with practical, business-focused data analytics training. Structured programs with progress tracking, assessments, and certificates.</p></div>
+<div class="pkg-grid reveal">
+<div class="pkg"><h3>Starter</h3><p class="pkgp">Small teams getting started with data</p><ul><li>Up to 10 employees</li><li>1 course access</li><li>Progress tracking</li><li>Completion certificates</li><li>Email support</li></ul><a class="btn btn-secondary" href="#about">Get Started</a></div>
+<div class="pkg featured"><span class="badge-best" style="position:relative">Most popular</span><h3>Growth</h3><p class="pkgp">Medium teams building data capability</p><ul><li>Up to 30 employees</li><li>3 course access</li><li>Custom learning paths</li><li>Progress reporting</li><li>Certificates</li><li>Priority support</li></ul><a class="btn btn-primary" href="#about">Get Started</a></div>
+<div class="pkg"><h3>Enterprise</h3><p class="pkgp">Larger organizations with custom needs</p><ul><li>Unlimited employees</li><li>All courses</li><li>Custom programs</li><li>Live training sessions</li><li>Organization reporting</li><li>Dedicated support</li></ul><a class="btn btn-secondary" href="#about">Request Proposal</a></div>
+</div></div></section>
+<section class="sec sec-mist"><div class="wrap"><div class="sec-head left reveal"><h2>Consulting Services</h2><p>We help organizations turn messy data into meaningful insight through dashboards, reporting, automation, and analytics strategy.</p></div>
+<div class="consult-grid reveal">
+<div class="consult-card"><h3>Analytics Consulting</h3><p>Business analysis, customer analytics, operational analytics, and performance analytics. We help you understand what your data is telling you.</p><div class="tag-row"><div class="chips"><span class="chip">Business Analysis</span><span class="chip">Customer Analytics</span><span class="chip">Performance Analytics</span></div></div></div>
+<div class="consult-card"><h3>BI and Dashboards</h3><p>Power BI dashboards, executive dashboards, operational dashboards, and KPI reporting. Turn your data into visual tools your team actually uses.</p><div class="tag-row"><div class="chips"><span class="chip">Power BI</span><span class="chip">Executive Dashboards</span><span class="chip">KPI Reporting</span></div></div></div>
+<div class="consult-card"><h3>Data Automation</h3><p>Excel automation, Power Query, reporting automation, SQL reporting, and recurring reporting. Stop doing manually what data can do for you.</p><div class="tag-row"><div class="chips"><span class="chip">Excel Automation</span><span class="chip">Power Query</span><span class="chip">SQL Reporting</span></div></div></div>
+<div class="consult-card"><h3>Data Strategy</h3><p>KPI design, reporting processes, data governance, and analytics capability development. Build the foundation for a data-driven organization.</p><div class="tag-row"><div class="chips"><span class="chip">KPI Design</span><span class="chip">Data Governance</span><span class="chip">Capability Building</span></div></div></div>
+</div></div></section>
+<section class="sec"><div class="wrap"><div class="banner reveal"><h2>Ready to discuss your data needs?</h2><p>Tell us about your organization, the challenge you are facing, and the outcome you want. We will respond with a tailored proposal.</p><a class="btn btn-cyan" href="#about">Request a Proposal</a></div></div></section>
+</div>
+<div class="page" id="page-community">
+<section class="phero"><div class="wrap reveal"><span class="eyebrow">THINDA Community</span><h1>Learn together. Grow together.</h1><p>THINDA Community connects learners, mentors, and professionals around practical data work. Ask questions, share projects, find study partners, and access career opportunities.</p></div></section>
+<section class="sec"><div class="wrap"><div class="sec-head left reveal"><h2>Community channels</h2><p>Join conversations around the tools and topics you are learning.</p></div>
+<div class="grid g3">
+<div class="card reveal"><h3>Data Analytics</h3><p>General analytics discussions, questions, and learning resources.</p></div>
+<div class="card reveal"><h3>Excel</h3><p>Formulas, pivot tables, dashboards, and Excel tips.</p></div>
+<div class="card reveal"><h3>SQL</h3><p>Queries, joins, optimization, and database questions.</p></div>
+<div class="card reveal"><h3>Power BI</h3><p>DAX, data modeling, dashboards, and visualization.</p></div>
+<div class="card reveal"><h3>Python</h3><p>Pandas, automation, scripting, and data wrangling.</p></div>
+<div class="card reveal"><h3>Career and Jobs</h3><p>Job postings, interview tips, CV reviews, and career advice.</p></div>
+</div></div></section>
+<section class="sec sec-mist"><div class="wrap"><div class="sec-head reveal"><span class="eyebrow center">Mentorship</span><h2>THINDA Mentor Network</h2><p>Connect with experienced data professionals who volunteer their time to guide your learning and career development.</p></div>
+<div class="grid g3">
+<div class="card reveal"><h3>Apply as a mentor</h3><p>Share your experience with the next generation of analysts. Set your own availability and areas of expertise.</p></div>
+<div class="card reveal"><h3>Get matched</h3><p>Learners are matched with mentors based on learning area, career goals, and availability.</p></div>
+<div class="card reveal"><h3>Structured sessions</h3><p>Schedule sessions, share notes, and track progress. Mentorship that is organized, not random.</p></div>
+</div><div style="text-align:center;margin-top:28px"><a class="btn btn-primary" href="#about">Become a Mentor</a></div>
+</div></section>
+<section class="sec"><div class="wrap"><div class="sec-head reveal"><span class="eyebrow center gold">Events</span><h2>Career Guidance Talks</h2><p>Virtual sessions on topics that matter to your data career. Free for all THINDA community members.</p></div>
+<div class="grid g2">
+<div class="card reveal"><h3>Starting a career in data analytics</h3><p>What hiring managers look for, how to position yourself, and where to start.</p><span class="earn">Coming soon</span></div>
+<div class="card reveal"><h3>Building your first analytics portfolio</h3><p>What to include, what to skip, and how to present your work so it gets noticed.</p><span class="earn">Coming soon</span></div>
+<div class="card reveal"><h3>Preparing for BI interviews</h3><p>Common questions, technical tests, and how to talk about your projects with confidence.</p><span class="earn">Coming soon</span></div>
+<div class="card reveal"><h3>Using AI in analytics careers</h3><p>How AI tools fit into a data analyst's workflow and how to demonstrate AI skills.</p><span class="earn">Coming soon</span></div>
+</div></div></section>
+</div>
+<div class="page" id="page-career">
+<section class="phero"><div class="wrap reveal"><span class="eyebrow">THINDA Career</span><h1>Build job-ready skills. Prepare for opportunities.</h1><p>THINDA does not promise jobs. We build the skills, portfolio, and confidence that make you ready when the opportunity comes.</p></div></section>
+<section class="sec"><div class="wrap"><div class="sec-head left reveal"><h2>Career Ready</h2><p>Beyond technical skills, THINDA prepares you for the job search with practical career support.</p></div>
+<div class="grid g3">
+<div class="card reveal"><h3>CV guidance</h3><p>Structure your CV to highlight what you can do, not just what you studied. Tailored for data roles.</p></div>
+<div class="card reveal"><h3>LinkedIn optimization</h3><p>Build a LinkedIn presence that attracts recruiters and demonstrates your analytical thinking.</p></div>
+<div class="card reveal"><h3>Portfolio development</h3><p>Turn your course projects into a portfolio that proves your capability to hiring managers.</p></div>
+<div class="card reveal"><h3>Interview preparation</h3><p>Technical questions, case studies, and how to explain your projects clearly under pressure.</p></div>
+<div class="card reveal"><h3>Mock interviews</h3><p>Practice with real questions and get feedback before the real thing.</p></div>
+<div class="card reveal"><h3>Job search strategy</h3><p>Where to look, how to apply, and how to stand out in a competitive market.</p></div>
+</div></div></section>
+<section class="sec sec-mist"><div class="wrap"><div class="sec-head reveal"><span class="eyebrow center gold">Future opportunity</span><h2>THINDA Talent Network</h2><p>Selected high-performing learners may be considered for eligible project and opportunity referrals. THINDA receives consulting projects from companies, and qualified graduates may be assigned to appropriate projects under THINDA's supervision.</p></div>
+<div class="banner reveal"><span class="soon">Coming soon</span><h2>Talent Network launching soon</h2><p>Complete your learning path, build a strong portfolio, and demonstrate your capability. The best opportunities go to those who are ready.</p></div>
+</div></section>
+</div>
+<div class="page" id="page-about">
+<section class="phero"><div class="wrap reveal"><span class="eyebrow">About THINDA</span><h1>Practical data skills. Better decisions.</h1><p>THINDA is a Kenyan data education and analytics company. We help individuals build job-ready analytics skills, and organizations make smarter decisions through data.</p></div></section>
+<section class="sec"><div class="wrap"><div class="founder reveal">
+<div><div class="avatar"><span class="mono-initial">A</span><div class="avatar-ring"></div></div></div>
+<div><span class="eyebrow">Founder</span><h2>Abijah Kabiro</h2><blockquote>I started THINDA because I saw too many people learning data analytics the wrong way: collecting certificates without building real capability. THINDA exists to close that gap. Every course, every project, every resource is designed to help you do the actual work, not just talk about it.</blockquote><p class="sign">Abijah Kabiro, Data  Analyst</p></div>
+</div></div></section>
+<section class="sec sec-mist"><div class="wrap"><div class="sec-head left reveal"><h2>Our values</h2></div>
+<div class="reveal">
+<div class="val"><h4>Practical over theoretical</h4><p>We teach skills by doing the work, not by lecturing about it. Every lesson has a practical component.</p></div>
+<div class="val"><h4>Outcomes over certificates</h4><p>The primary outcome is capability. What can you actually DO after completing this course? That question drives everything.</p></div>
+<div class="val"><h4>Honesty over hype</h4><p>We do not promise jobs or inflate outcomes. We build skills, and we are transparent about what that takes.</p></div>
+<div class="val"><h4>African perspective</h4><p>Skills shaped for the businesses and realities of Africa. Built in Kenya, designed for the continent and beyond.</p></div>
+</div></div></section>
+<section class="sec"><div class="wrap"><div class="sec-head reveal"><h2>Get in touch</h2><p>Whether you want to learn, train your team, partner with us, or just ask a question.</p></div>
+<div class="contact-methods reveal">
+<a class="cm" href="mailto:contact.thinda@gmail.com"><div class="cm-ic"><svg viewBox="0 0 24 24" fill="none" stroke="#1B1F3B" stroke-width="1.8" stroke-linecap="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></div><div><div class="cm-t">Email us</div><div class="cm-s">contact.thinda@gmail.com</div></div></a>
+<a class="cm" href="https://wa.me/254710525232" target="_blank" rel="noopener"><div class="cm-ic"><svg viewBox="0 0 24 24" fill="none" stroke="#1B1F3B" stroke-width="1.8" stroke-linecap="round"><path d="M4 20l1.5-4A8 8 0 1 1 12 20a8 8 0 0 1-4-1z"/></svg></div><div><div class="cm-t">WhatsApp</div><div class="cm-s">+254 710 525 232</div></div></a>
+<a class="cm" href="https://www.linkedin.com/company/thinda/" target="_blank" rel="noopener"><div class="cm-ic"><svg viewBox="0 0 24 24" fill="none" stroke="#1B1F3B" stroke-width="1.8" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 11v6M8 8v.01M12 17v-3.5a2 2 0 0 1 4 0V17"/></svg></div><div><div class="cm-t">LinkedIn</div><div class="cm-s">Follow THINDA</div></div></a>
+</div>
+<div style="margin-top:36px" class="reveal">
+<div class="form-wrap"><div class="form-head"><h2>Send us a message</h2></div><div class="form-embed"><iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe1AMjRw_7xSUTxnXNdslCxvggH094ZiSGy0zzy50yE0WZpeQ/viewform?usp=publish-editor" title="THINDA enquiry form" loading="lazy">Loading…</iframe></div></div>
+</div></div></section>
+</div>
+</main><footer class="footer"><div class="wrap">
+<div class="footer-top">
+<div>
+<div class="footer-logo"><img src="data:image/png;base64,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" alt="THINDA"></div>
+<p class="tg">Building practical data skills. Empowering better decisions.</p>
+<div class="socials">
+<a href="https://www.linkedin.com/company/thinda/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 11v6M8 8v.01M12 17v-3.5a2 2 0 0 1 4 0V17"/></svg></a>
+<a href="https://wa.me/254710525232" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M4 20l1.5-4A8 8 0 1 1 12 20a8 8 0 0 1-4-1z"/><path d="M9 10c0 3 2 5 5 5"/></svg></a>
+<a href="mailto:official.thinda@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></a>
+</div></div>
+<div><h5>Learn</h5>
+<a class="fl" data-page="learn" href="#learn">Courses</a>
+<a class="fl" data-page="learn" href="#learn">Career Paths</a>
+<a class="fl" data-page="community" href="#community">Community</a>
+<a class="fl" data-page="career" href="#career">Career</a>
+</div>
+<div><h5>Business</h5>
+<a class="fl" data-page="business" href="#business">Corporate Training</a>
+<a class="fl" data-page="business" href="#business">Consulting</a>
+<a class="fl" data-page="about" href="#about">About</a>
+<a class="fl" data-page="about" href="#about">Contact</a>
+</div>
+</div>
+<div class="footer-bottom">
+<span>Copyright 2026 THINDA. All rights reserved.</span>
+<a href="mailto:official.thinda@gmail.com">official.thinda@gmail.com</a>
+</div>
+</div></footer>
+<script>
+(function(){
+var pages=['home','learn','business','community','career','about'];
+var menu=document.getElementById('navmenu'),toggle=document.querySelector('.nav-toggle');
+function show(id){
+if(pages.indexOf(id)<0)id='home';
+document.querySelectorAll('.page').forEach(function(p){p.classList.remove('active')});
+var el=document.getElementById('page-'+id);el.classList.add('active');
+document.querySelectorAll('.nav-menu a.link').forEach(function(a){a.classList.toggle('active',a.dataset.page===id)});
+el.querySelectorAll('.reveal').forEach(function(r){r.classList.add('in')});
+el.querySelectorAll('.method').forEach(function(m){m.classList.add('in')});
+if(menu)menu.classList.remove('open');
+window.scrollTo(0,0);
+}
+window.addEventListener('hashchange',function(){show((location.hash||'#home').slice(1))});
+if(toggle)toggle.addEventListener('click',function(){var o=menu.classList.toggle('open');toggle.setAttribute('aria-expanded',o)});
+show((location.hash||'#home').slice(1));
+})();
+</script></body></html>
